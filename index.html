@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2{
+            text-align: center;
+            font-weight: bold;
+        }
+        .Parrafo_inicio {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Estilos para el NAV */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: large;
+        }
+        nav a:hover{
+            color: aqua;
+        }
+
+        /* Estilos para las secciones */
+        section {
+            display: none;
+            padding: 20px;
+        }
+        section.active {
+            display: block;
+        }
+        /* Estilos para el formulario */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #413c3c;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: white;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para la galería */
+        .gallery-container {
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 100vh; /* Altura de la galería (pantalla completa) */
+            background-color: #f9f9f9;
+        }
+        .gallery-item {
+            max-width: 300px; /* Ancho máximo de cada imagen */
+            margin: 20px; /* Espacio entre las imágenes */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .parrafo_img{
+            text-align: center;
+        }
+        .p_contacto{
+            text-align: center;
+        }
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="active">
+        <h1>Bienvenido a nuestra Galería de Arte</h1>
+        <p class="Parrafo_inicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia similique cumque ab aperiam, aut perspiciatis sit tempore sequi labore. Quia consequuntur totam illum fugit nemo quasi officiis ipsa dicta accusamus provident ex blanditiis eius magni ullam beatae saepe reiciendis tempora nostrum, perspiciatis doloribus ducimus officia velit. Accusantium, minus doloremque non placeat aliquam voluptatem eos dolorem numquam odit, illum, labore quibusdam culpa dolorum enim nesciunt quas. Debitis corrupti facere eaque voluptas modi consequatur quibusdam autem sint, voluptates soluta reiciendis necessitatibus fuga nulla et! Expedita magnam molestias illo quas soluta, minus ducimus dignissimos. Quo exercitationem repellendus tempora, commodi facilis libero suscipit.</p>
+        <p class="Parrafo_inicio">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam porro, voluptatum excepturi eveniet delectus veritatis possimus dolorum iure iusto odio?</p>
+        <p class="Parrafo_inicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ea cupiditate perferendis veritatis aperiam iure.</p>
+        <p class="Parrafo_inicio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, hic perspiciatis. Unde, laboriosam sequi asperiores illo tempora ex dolores similique consectetur natus? Officia soluta cupiditate illum beatae provident, id quaerat blanditiis voluptates nisi dolore, similique error libero eaque. Fugit beatae non et ullam necessitatibus eveniet voluptas corrupti molestias excepturi laudantium.</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería de Fotos</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="/IMAGENES/arte1.png" alt="Imagen 1">
+                <p class="parrafo_img">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae magnam recusandae laboriosam similique maiores! Quia!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/IMAGENES/arte2.png" alt="Imagen 2">
+                <p class="parrafo_img">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, quos tempora. Libero rem neque ratione ut ex nemo, ipsa quae excepturi impedit sit commodi vitae.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="IMAGENES/arte3png.png" alt="Imagen 3">
+                <p class="parrafo_img">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ratione?</p>
+            </div>
+            <!-- Agrega más imágenes aquí -->
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p class="p_contacto">¿Tienes alguna pregunta o algo que decirnos? ¡Contactanos!</p>
+        <!-- Formulario de contacto -->
+        <form action="procesar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            
+            <input type="submit" value="Enviar">
+
+        </form>
+    </section>
+
+    <script>
+        // Cambia la clase "active" al hacer clic en los enlaces de la barra de navegación
+        const links = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        links.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
